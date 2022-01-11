@@ -15,6 +15,8 @@
 		A380E179278DBE13004FA145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A380E178278DBE13004FA145 /* Assets.xcassets */; };
 		A380E17C278DBE13004FA145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A380E17A278DBE13004FA145 /* LaunchScreen.storyboard */; };
 		A380E184278DC3D0004FA145 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = A380E183278DC3D0004FA145 /* data.plist */; };
+		A380E18A278DDB48004FA145 /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380E185278DD62C004FA145 /* Car+CoreDataClass.swift */; };
+		A380E18B278DDB52004FA145 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380E186278DD62C004FA145 /* Car+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A380E17B278DBE13004FA145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A380E17D278DBE13004FA145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A380E183278DC3D0004FA145 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		A380E185278DD62C004FA145 /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A380E186278DD62C004FA145 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		A380E16B278DBE12004FA145 /* CoreDataApp5 */ = {
 			isa = PBXGroup;
 			children = (
+				A380E189278DD64B004FA145 /* Models */,
 				A380E16C278DBE12004FA145 /* AppDelegate.swift */,
 				A380E16E278DBE12004FA145 /* SceneDelegate.swift */,
 				A380E170278DBE12004FA145 /* ViewController.swift */,
@@ -71,6 +76,15 @@
 				A380E183278DC3D0004FA145 /* data.plist */,
 			);
 			path = CoreDataApp5;
+			sourceTree = "<group>";
+		};
+		A380E189278DD64B004FA145 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A380E185278DD62C004FA145 /* Car+CoreDataClass.swift */,
+				A380E186278DD62C004FA145 /* Car+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A380E18B278DDB52004FA145 /* Car+CoreDataProperties.swift in Sources */,
+				A380E18A278DDB48004FA145 /* Car+CoreDataClass.swift in Sources */,
 				A380E171278DBE12004FA145 /* ViewController.swift in Sources */,
 				A380E16D278DBE12004FA145 /* AppDelegate.swift in Sources */,
 				A380E177278DBE12004FA145 /* CoreDataApp5.xcdatamodeld in Sources */,

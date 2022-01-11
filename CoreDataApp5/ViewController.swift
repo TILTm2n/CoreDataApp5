@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -36,6 +37,35 @@ class ViewController: UIViewController {
             
             count += 1
         }
+        
+    }
+    
+    func getDataFromFile(){
+        //можно использовать метод дла получения определенный в классе
+        //let fetchRequest: NSFetchRequest<Car> = Car.fetchRequest()
+        //либо так
+        let fetchRequest = NSFetchRequest<Car>(entityName: "Car")
+        fetchRequest.predicate = NSPredicate(format: "mark != nil")
+        
+        var records = 0
+        
+        do {
+            let count = try context.count(for: fetchRequest)
+            records = count
+            print("Data is there already")
+        } catch  {
+            print(error.localizedDescription)
+        }
+        
+        //проверяем, были ли в БД уже какие-то объекты, если были то не загружаем данные
+        guard records == 0 else {
+            return
+        }
+        
+        //определим файл с которого будем считывать данные. Bundle - это наш проект/расположение
+        let pathToFile = Bundle.main.path(forResource: "data", ofType: "plist")
+        //получаем содержимое этого вайла как массив
+        let dataArray = NSArray(contentsOfFile: pathToFile!)
         
     }
 
